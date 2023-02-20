@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "TTLakesRegular";
+  src: url("./fonts/TTLakes-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "TTLakesRegular";
+  background-color: #f8f8f8;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  color: #7e7e82;
+  line-height: 24px;
+  font-size: 16px;
+  font-family: "TTLakesRegular";
+  padding: 16px 24px;
+  background: linear-gradient(to right, #f2f2f2 40%, #ffffff 100%);
+}
+.wrapper {
+  padding: 16px 24px;
+}
+.swiper {
+  height: 100%;
+  margin-right: -16px !important;
+}
+.swiper-wrapper,
+.brand-list {
+  list-style: none;
+}
+.brand-list {
+  display: none;
+}
+.show-button {
+  display: none;
+  cursor: pointer;
+}
+li.swiper-slide,
+.brand-list__item {
+  display: flex;
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  justify-content: space-between;
+  padding: 16px;
+  height: 72px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc !important;
+}
+.swiper-pagination-bullet {
+  background-color: #dddddd !important;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .swiper {
+    display: none;
+  }
+  .show-button {
+    display: block;
+  }
+  .brand-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 24px;
+  }
+  .not-on-ipad {
+    display: none;
+  }
+  .show-button {
+    display: block;
+    margin-top: 24px;
+    padding: 0px;
+  }
+  .button-text {
+    margin: 4px;
+    font-size: 16px;
+    color: #1b1c21;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brand-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .not-on-ipad {
+    display: block;
+  }
+  .hidden-tablet {
+    display: flex;
+  }
+}
